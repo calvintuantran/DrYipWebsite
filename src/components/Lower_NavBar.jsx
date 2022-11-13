@@ -44,21 +44,6 @@ ElevationScroll.propTypes = {
 };
 
 const ResponsiveAppBar = (props) => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     <>
       <ElevationScroll {...props}>
@@ -91,13 +76,12 @@ const ResponsiveAppBar = (props) => {
                   aria-label="account of current user"
                   aria-controls="menu-appbar"
                   aria-haspopup="true"
-                  onClick={handleOpenNavMenu}
                   color="inherit"
                 >
                   <MenuIcon />
                 </IconButton>
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
@@ -125,10 +109,12 @@ const ResponsiveAppBar = (props) => {
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                 {pages.map((page) => (
-                  <Link to={`/${page}`} style={{ textDecoration: "none", color: "white" }}>
+                  <Link
+                    to={`/${page}`}
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
                     <Button
                       key={page}
-                      onClick={handleCloseNavMenu}
                       sx={{ my: 2, color: "white", display: "block" }}
                     >
                       {page}
@@ -140,7 +126,6 @@ const ResponsiveAppBar = (props) => {
                 <Menu
                   sx={{ mt: "45px" }}
                   id="menu-appbar"
-                  anchorEl={anchorElUser}
                   anchorOrigin={{
                     vertical: "top",
                     horizontal: "right",
@@ -150,8 +135,6 @@ const ResponsiveAppBar = (props) => {
                     vertical: "top",
                     horizontal: "right",
                   }}
-                  open={Boolean(anchorElUser)}
-                  onClose={handleCloseUserMenu}
                 ></Menu>
               </Box>
             </Toolbar>
