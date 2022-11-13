@@ -1,0 +1,18 @@
+.Navbar_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider_sections {
+  display: flex;
+  margin: 1rem;
+  justify-content: space-around;
+}
+/* color: #3388ff; */
+
+.iconStyling {
+  color: #3388ff;
+  font-weight: bold;
+  padding-right: 0.5rem;
+}
