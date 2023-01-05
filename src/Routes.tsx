@@ -16,9 +16,9 @@ export function RouteStore() {
       <LowerNavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="About" element={<About />} />
+        <Route path="About Dr.Yip" element={<About />} />
         <Route path="research" element={<Research />} />
-        <Route path="medication" element={<Medication />} />
+        <Route path="medications" element={<Medication />} />
       </Routes>
     </>
   );

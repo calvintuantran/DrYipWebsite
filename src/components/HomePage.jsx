@@ -16,25 +16,23 @@ const HomePage = () => {
       <FeaturedPost />
       <div className="banner_container">
         <div className="right_container">
-          <Typography variant="h4" >
-            Get Care Now
-          </Typography>
+          <Typography variant="h4">Get Care Now</Typography>
           <div className="underlineHome" />
-          <Typography>$350 – for new patient consultation</Typography>
-          <Typography sx={{ mb: "1rem" }}>
-            $150 – for follow up visit
-          </Typography>
-          <Typography >
-            Dr. Yip only accepts Medicare Insurance. For patients with private
-            insurance, our office staff will assist you with filing an
-            Out-of-Network claim form for your visit.
+          <Typography>$350 – New Patient Consultation </Typography>
+          <Typography sx={{ mb: "1rem" }}>$150 – Follow-Up Visit</Typography>
+          <Typography>
+            Dr. Yip does not accept commercial insurance and only accepts
+            Medicare PPO. Patients with private insurance can request a
+            superbill (itemized receipt) for their visit. It is the patient’s
+            responsibility to submit the superbill to their insurance and our
+            office does not guarantee reimbursement.
           </Typography>
           <Link
             to={`/about`}
             style={{ textDecoration: "none", color: "white" }}
           >
             <Button variant="contained" size="large" sx={{ marginTop: "1rem" }}>
-              Learn More!
+              About Dr.Yip
             </Button>
           </Link>
         </div>

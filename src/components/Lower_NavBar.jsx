@@ -16,13 +16,10 @@ import MenuItem from "@mui/material/MenuItem";
 import PropTypes from "prop-types";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 
-const pages = ["About", "Research", "Medication"];
+const pages = ["About Dr.Yip", "Research", "Medications"];
 
 function ElevationScroll(props) {
   const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -36,10 +33,6 @@ function ElevationScroll(props) {
 
 ElevationScroll.propTypes = {
   children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
@@ -47,7 +40,6 @@ const ResponsiveAppBar = (props) => {
   return (
     <>
       <ElevationScroll {...props}>
-        {/*allows positioned elements to act its relative psotion until scrolled which it becomes fixed*/}
         <AppBar position="sticky">
           <Container maxWidth="xl">
             <Toolbar disableGutters>
@@ -60,7 +52,7 @@ const ResponsiveAppBar = (props) => {
                 component="a"
                 href="/"
                 sx={{
-                  m: 1,
+                  m: 3,
                   dislay: { xs: "none", md: "flex" },
                   fontFamily: "monospace",
                   fontWeight: 700,
@@ -82,7 +74,12 @@ const ResponsiveAppBar = (props) => {
                 </IconButton>
                 {pages.map((page) => (
                   <MenuItem key={page}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography
+                      textAlign="center"
+                      sx={{ textTransform: "capitalize" }}
+                    >
+                      {page}
+                    </Typography>
                   </MenuItem>
                 ))}
               </Box>
@@ -115,7 +112,13 @@ const ResponsiveAppBar = (props) => {
                   >
                     <Button
                       key={page}
-                      sx={{ my: 2, color: "white", display: "block" }}
+                      sx={{
+                        my: 2,
+                        color: "white",
+                        display: "block",
+                        textTransform: "capitalize",
+                        fontSize: 16,
+                      }}
                     >
                       {page}
                     </Button>

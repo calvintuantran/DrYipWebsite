@@ -46,16 +46,16 @@ const HomePage = () => {
                   gutterBottom
                   sx={{ mb: "2rem" }}
                 >
-                  Welcome to the Dr. Yip Office!
+                  Welcome to Nutrition Medical Center!
                 </Typography>
                 {/*  transparancy make it white ish background */}
                 <div className="hoursBackground">
                   {/*  background */}
                   <Typography variant="h6" sx={{ marginTop: "15vh" }}>
-                    Office hours: Monday – Friday 8:00 am to 5:00 pm
+                    Office Hours: Monday-Friday, 8:00 A.M. to 5:00 P.M.
                   </Typography>
                   <Typography variant="h6">
-                    Clinic hours: Monday – Wednesday 8:00 am to 5:00 pm
+                    Clinic Hours: Monday-Wednesday, 8:00 A.M. to 5:00 P.M.
                   </Typography>
                 </div>
               </Box>

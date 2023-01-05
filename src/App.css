@@ -21,6 +21,7 @@
   color: hsl(205, 78%, 60%);
   font-weight: bold;
   font-style: italic;
+  padding: 0 6px;
 }
 
 .center {

@@ -16,8 +16,10 @@ const UpperNavBar = () => {
     <>
       <div className="Navbar_container">
         <div className="divider_sections">
-          <Typography> Book by Phone or Email</Typography>
-          <ArrowRightAltIcon style={{ color: "#3388ff" }} />
+          <Typography style={{ marginRight: "1rem" }}>
+            {" "}
+            Book by Phone or Email
+          </Typography>
           <EmailIcon className="iconStyling" />
           <Typography style={{ marginRight: "1rem" }}>
             Nutritionmedcenter@yahoo.com
