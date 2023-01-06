@@ -5,7 +5,6 @@ import { Typography } from "@mui/material";
 import Divider from "@mui/material/Divider";
 
 // Icon
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
 import EmailIcon from "@mui/icons-material/Email";
