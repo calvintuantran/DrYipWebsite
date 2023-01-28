@@ -9,7 +9,7 @@ const Medication = () => {
   return (
     <>
       <Typography variant="h3" className="title">
-        Medication
+        Medications
       </Typography>
       <div className="underline" />
       {Medications.map((item) => {

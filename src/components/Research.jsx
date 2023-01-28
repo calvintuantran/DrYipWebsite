@@ -2,9 +2,13 @@ import React from "react";
 import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
+// Images
+import YipResearch from "../images/Yip Head Shot (2).jpg";
+
 const useStyles = makeStyles({
   paragraph: {
     margin: "1rem 10%",
+    display: "column",
   },
 });
 
@@ -13,32 +17,37 @@ const Research = () => {
 
   return (
     <>
-      <Typography variant="h3" className="title">
-        Early Research
-      </Typography>
-      <div className="underline" />
-      <div className={classes.paragraph}>
-        <Typography>
-          In 1996, Dr. Yip joined the UCLA School of Medicine as an assistant
-          clinical professor. During his early professorship, Dr. Yip’s research
-          focus was in the area of Obesity, Diabetes, Nutrition and Cancer
-          Prevention. Dr. Yip has studied the relationship between obesity,
-          nutrition and prostate cancer prevention and progression. He was the
-          first author in a review article published in the authoritative
-          journal Urologic Clinic of North America entitled
-          <span className="important">
-            “Nutrition and Prostate cancer.” (1)
-          </span>
-          Dr. Yip was the first physician in the world to conduct a randomized
-          clinical trial to examine whether red yeast rice as a dietary
-          supplement could reduce cholesterol levels. The results of this
-          influential clinic study was published in the
-          <span className="important">
-            “Cholesterol-lowering effects of a proprietary Chinese
-            red-yeast-rice dietary supplement”
-          </span>
-          in the American Journal of Clinical Nutrition (2).
-        </Typography>
+      <div className="post_container ">
+        <div className="leftContainer">
+          <img src={YipResearch} alt="Dr. Yip" className="yip_photo" />
+        </div>
+        <div>
+          <Typography className="title" variant="h4">
+            Early Research
+          </Typography>
+          <div className="underline" />
+          <Typography sx={{ margin: "1rem 0" }}>
+            In 1996, Dr. Yip joined the UCLA School of Medicine as an assistant
+            clinical professor. During his early professorship, Dr. Yip’s
+            research focus was in the area of Obesity, Diabetes, Nutrition and
+            Cancer Prevention. Dr. Yip has studied the relationship between
+            obesity, nutrition and prostate cancer prevention and progression.
+            He was the first author in a review article published in the
+            authoritative journal Urologic Clinic of North America entitled
+            <span className="important">
+              “Nutrition and Prostate cancer.” (1)
+            </span>
+            Dr. Yip was the first physician in the world to conduct a randomized
+            clinical trial to examine whether red yeast rice as a dietary
+            supplement could reduce cholesterol levels. The results of this
+            influential clinic study was published in the
+            <span className="important">
+              “Cholesterol-lowering effects of a proprietary Chinese
+              red-yeast-rice dietary supplement”
+            </span>
+            in the American Journal of Clinical Nutrition (2).
+          </Typography>
+        </div>
       </div>
       <div className={classes.paragraph}>
         <Typography>
@@ -78,15 +87,23 @@ const Research = () => {
       </Typography>
       <div className="underline" />
       <div className={classes.paragraph}>
-        <Typography>
-          (1) http://www.sciencedirect.com/science/article/pii/S0094014305700793
-        </Typography>
-        <Typography>
-          (2) http://ajcn.nutrition.org/content/69/2/231.full
-        </Typography>
-        <Typography>
-          (3) http://onlinelibrary.wiley.com/doi/10.1038/oby.2001.140/abstract
-        </Typography>
+        <ul>
+          <li>
+            <a href="http://www.sciencedirect.com/science/article/pii/S0094014305700793">
+              http://www.sciencedirect.com/science/article/pii/S0094014305700793
+            </a>
+          </li>
+          <li>
+            <a href="http://ajcn.nutrition.org/content/69/2/231.full">
+              http://ajcn.nutrition.org/content/69/2/231.full
+            </a>
+          </li>
+          <li>
+            <a href="http://onlinelibrary.wiley.com/doi/10.1038/oby.2001.140/abstract">
+              http://onlinelibrary.wiley.com/doi/10.1038/oby.2001.140/abstract
+            </a>
+          </li>
+        </ul>
       </div>
     </>
   );

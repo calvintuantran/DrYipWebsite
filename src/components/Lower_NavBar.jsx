@@ -44,7 +44,7 @@ const ResponsiveAppBar = (props) => {
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <MedicationIcon
-                sx={{ display: { xs: "none", md: "flex" }, ml: 5 }}
+                sx={{ display: { xs: "none", md: "flex" }, ml: 4 }}
               />
               <Typography
                 variant="h6"
