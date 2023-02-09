@@ -73,14 +73,23 @@ const ResponsiveAppBar = (props) => {
                   <MenuIcon />
                 </IconButton>
                 {pages.map((page) => (
-                  <MenuItem key={page}>
-                    <Typography
-                      textAlign="center"
-                      sx={{ textTransform: "capitalize" }}
+                  <Link
+                    to={`/${page}`}
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    <Button
+                      key={page}
+                      sx={{
+                        my: 2,
+                        color: "white",
+                        display: "block",
+                        textTransform: "capitalize",
+                        fontSize: 16,
+                      }}
                     >
                       {page}
-                    </Typography>
-                  </MenuItem>
+                    </Button>
+                  </Link>
                 ))}
               </Box>
               <MedicationIcon

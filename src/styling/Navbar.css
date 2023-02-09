@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 }
 
 .divider_sections {
@@ -9,7 +10,6 @@
   margin: 1rem;
   justify-content: space-around;
 }
-/* color: #3388ff; */
 
 .iconStyling {
   color: #3388ff;

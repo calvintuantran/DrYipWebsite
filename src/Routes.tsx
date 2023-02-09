@@ -9,16 +9,10 @@ import About from "./components/About.jsx";
 import Research from "./components/Research.jsx";
 import Medication from "./components/Medication.jsx";
 
-// Utils
-import Responsive from "./helpers/isMobile";
-
 export function RouteStore() {
-  const isMobile = Responsive.isMobileDevice();
-
-  console.log("isMobile", isMobile);
   return (
     <>
-      {!isMobile && <UpperNavBar />}
+      <UpperNavBar />
       <LowerNavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
