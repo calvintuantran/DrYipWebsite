@@ -12,7 +12,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MedicationIcon from "@mui/icons-material/Medication";
 import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
 import PropTypes from "prop-types";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 
