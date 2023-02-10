@@ -49,9 +49,10 @@
 }
 
 .hoursBackground {
+  position: absolute;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 55px;
   padding-left: 1.5rem;
   color: black;
-  margin-top: 20%;
+  margin-top: 25%;
 }
