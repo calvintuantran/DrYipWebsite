@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => {
       height: "55vh",
       [theme.breakpoints.down("md")]: {
         backgroundPosition: "40%",
-        height: "40vh",
       },
     },
   };
