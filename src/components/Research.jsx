@@ -1,4 +1,3 @@
-import React from "react";
 import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
@@ -9,6 +8,7 @@ const useStyles = makeStyles({
   paragraph: {
     margin: "1rem 10%",
     display: "column",
+    overflow: "hidden",
   },
 });
 

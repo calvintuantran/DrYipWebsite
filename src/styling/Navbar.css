@@ -16,3 +16,13 @@
   font-weight: bold;
   padding-right: 0.5rem;
 }
+
+.mobileNavBarContainer {
+  padding-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  align-items: center;
+  width: 100%;
+  border-radius: 25px;
+}

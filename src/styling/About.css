@@ -3,20 +3,38 @@
 }
 
 .yip_photo {
+  object-fit: cover;
   min-height: 72%;
   max-width: 72%;
   border-radius: 4%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin-bottom: 1rem;
 }
-
-.post_container {
-  margin: 4rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.left_container {
+  flex: 65%;
 }
-
-.leftContainer {
+.right_container {
   display: flex;
   justify-content: center;
+  flex: 35%;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 600px) {
+  .yip_photo {
+    max-width: 100%;
+  }
+  .right_container {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .yip_photo {
+    max-width: 60%;
+  }
+  .right_container {
+    margin: 1rem;
+  }
 }

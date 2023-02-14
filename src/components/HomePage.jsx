@@ -7,21 +7,40 @@ import FeaturedPost from "./FeaturedPost.jsx";
 // Images
 import yipProfessional from "../images/Yip PR Headshot.jpg";
 
+// Helpers
+import { IsMobile } from "../isMobile";
+
 import "../styling/HomePage.css";
 const HomePage = () => {
+  const isMobile = IsMobile();
+  let mobileFont = isMobile ? "h5" : "h4";
+
   return (
     <>
       <FeaturedPost />
       <div className="banner_container">
-        <div className="right_container">
-          <Typography variant="h4">New Patient Information</Typography>
+        <div className="left_container ">
+          <Typography variant={mobileFont}>
+            Office Hours: Monday - Friday, 8:00 AM to 5:00 PM
+          </Typography>
+          <Typography
+            sx={{ m: "1rem 0", fontSize: isMobile && "1.4rem" }}
+            variant={mobileFont}
+          >
+            Clinic Hours: Monday - Wednesday, 8:00 AM to 5:00 PM
+          </Typography>
           <div
             className="underlineHome"
-            style={{ position: "relative", left: "3rem" }}
+            style={{ position: "relative", left: "25%", margin: "1.5rem 0" }}
           />
-          <Typography>$350 – New Patient Consultation </Typography>
-          <Typography sx={{ mb: "1rem" }}>$150 – Follow-Up Visit</Typography>
-          <Typography>
+
+          <Typography variant="h4">New Patient Information</Typography>
+
+          <Typography variant="h6">$350 – New Patient Consultation </Typography>
+          <Typography sx={{ mb: "1rem" }} variant="h6">
+            $150 – Follow-Up Visit
+          </Typography>
+          <Typography sx={{ fontSize: "1.1rem", mb: "1`rem" }}>
             Dr. Yip does not accept commercial insurance and only accepts
             Medicare PPO. Patients with private insurance can request a
             superbill (itemized receipt) for their visit. It is the patient’s
@@ -29,13 +48,8 @@ const HomePage = () => {
             office does not guarantee reimbursement.
           </Typography>
         </div>
-        <div className="leftContainer">
-          <img
-            src={yipProfessional}
-            alt="Dr. Yip"
-            className="yip_photo"
-            style={{ maxWidth: "42%", position: "relative", left: "3rem" }}
-          />
+        <div className="right_container">
+          <img src={yipProfessional} alt="Dr. Yip" className="yip_photo" />
         </div>
       </div>
     </>

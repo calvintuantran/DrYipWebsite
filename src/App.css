@@ -1,3 +1,9 @@
+.post_container {
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .underline {
   background: hsl(205, 78%, 60%);
   height: 0.25rem;
@@ -30,4 +36,29 @@
 
 .whiteSpaceContent {
   white-space: nowrap;
+}
+
+.leftContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.marginLeftRight {
+  margin: 0 2rem;
+}
+/* Responsive CSS */
+@media screen and (max-width: 992px) {
+  .post_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 1.6rem !important;
+  }
+  .post_container {
+    margin: 1rem;
+  }
+  .displayflex {
+    display: flex;
+  }
 }

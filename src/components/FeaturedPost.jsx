@@ -3,24 +3,37 @@ import Box from "@mui/material/Box";
 import { Typography, Grid } from "@mui/material";
 import Photo from "../images/IMG_2065.jpg";
 
+import { makeStyles } from "@mui/styles";
+
 import "../styling/HomePage.css";
+
+const useStyles = makeStyles((theme) => {
+  return {
+    featuredPhoto: {
+      position: "relative",
+      color: "#fff",
+      backgroundSize: "cover",
+      filter: "brightness(1.2)",
+      backgroundPosition: "100% 35%",
+      backgroundImage: `url(${Photo})`,
+      borderRadius: "25px",
+      m: "1rem",
+      height: "55vh",
+      [theme.breakpoints.down("md")]: {
+        backgroundPosition: "40%",
+        height: "40vh",
+      },
+    },
+  };
+});
+
 const HomePage = () => {
+  const classes = useStyles();
+
   return (
     <>
       <div className="HomePage">
-        <Paper
-          sx={{
-            position: "relative",
-            color: "#fff",
-            backgroundSize: "cover",
-            filter: "brightness(1.2)",
-            backgroundPosition: "100% 35%",
-            backgroundImage: `url(${Photo})`,
-            m: "1rem",
-            borderRadius: "25px",
-            height: "55vh",
-          }}
-        >
+        <Paper sx={{ borderRadius: "25px" }} className={classes.featuredPhoto}>
           <Box
             sx={{
               position: "absolute",
@@ -40,22 +53,9 @@ const HomePage = () => {
                   p: { xs: 3, md: 6 },
                 }}
               >
-                <Typography
-                  variant="h3"
-                  color="inherit"
-                  gutterBottom
-                  sx={{ mb: "2rem" }}
-                >
+                <Typography variant="h3" color="white" gutterBottom>
                   Welcome to Dr Yip's Office!
                 </Typography>
-                <div className="hoursBackground">
-                  <Typography variant="h6">
-                    Office Hours: Monday-Friday, 8:00 A.M. to 5:00 P.M.
-                  </Typography>
-                  <Typography variant="h6">
-                    Clinic Hours: Monday-Wednesday, 8:00 A.M. to 5:00 P.M.
-                  </Typography>
-                </div>
               </Box>
             </Grid>
           </Grid>

@@ -9,13 +9,14 @@
 .banner_container {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-left: 4rem;
 }
 
 .doctor_img {
-  max-width: 80%;
+  max-width: 100%;
+  height: auto;
   margin-left: 5rem;
+  object-fit: cover;
 }
 
 .text_container {
@@ -32,15 +33,6 @@
   z-index: 1;
 }
 
-.secondaryblob {
-  border-radius: 68% 32% 70% 30% / 20% 74% 26% 80%;
-  width: 100%;
-  background-color: grey;
-  z-index: -999;
-  position: absolute;
-  top: 50vh;
-}
-
 .underlineHome {
   background: hsl(205, 78%, 60%);
   height: 0.25rem;
@@ -51,8 +43,21 @@
 .hoursBackground {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 55px;
+  min-width: 50%;
+  border-radius: 15px;
+  padding: 0.5rem;
   padding-left: 1.5rem;
   color: black;
-  margin-top: 25%;
+  margin-top: 10%;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 1000px) {
+  .banner_container {
+    flex-direction: column;
+    margin: 2rem;
+  }
+  .test {
+    background-position: 40%;
+  }
 }

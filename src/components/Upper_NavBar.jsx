@@ -17,7 +17,7 @@ const UpperNavBar = () => {
         <div className="divider_sections">
           <EmailIcon className="iconStyling" />
           <Typography style={{ marginRight: "1rem" }}>
-            Nutritionmedcenter@yahoo.com
+            ianyipmd@proton.me
           </Typography>
           <LocalPhoneIcon className="iconStyling" />
           <Typography style={{ marginRight: "1rem" }}>818-615-2888</Typography>

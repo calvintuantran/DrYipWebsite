@@ -36,123 +36,126 @@ ElevationScroll.propTypes = {
 };
 
 const ResponsiveAppBar = (props) => {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
   return (
-    <>
-      <ElevationScroll {...props}>
-        <AppBar position="sticky">
-          <Container maxWidth="xl">
-            <Toolbar disableGutters>
-              <MedicationIcon
-                sx={{ display: { xs: "none", md: "flex" }, ml: 4 }}
-              />
-              <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                href="/"
+    <ElevationScroll {...props}>
+      <AppBar position="sticky">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <MedicationIcon
+              sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            />
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                m: 3,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
+                fontWeight: 700,
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              Nutrition Medical Center
+            </Typography>
+
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
                 sx={{
-                  m: 3,
-                  dislay: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
-                  fontWeight: 700,
-                  color: "inherit",
-                  textDecoration: "none",
+                  display: { xs: "block", md: "none" },
                 }}
               >
-                Nutrition Medical Center
-              </Typography>
-              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-                <IconButton
-                  size="large"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  color="inherit"
+                {pages.map((page) => (
+                  <Link
+                    to={`/${page}`}
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    <Button
+                      key={page}
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, display: "block" }}
+                    >
+                      {page}
+                    </Button>
+                  </Link>
+                ))}
+              </Menu>
+            </Box>
+            <MedicationIcon
+              sx={{ display: { xs: "flex", md: "none" }, mr: "5px" }}
+            />
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                display: { xs: "flex", md: "none" },
+                flexGrow: 1,
+                fontFamily: "monospace",
+                fontWeight: 700,
+                color: "inherit",
+                textDecoration: "none",
+                fontSize: " 1rem",
+              }}
+            >
+              Nutrition Medical Center
+            </Typography>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              {pages.map((page) => (
+                <Link
+                  to={`/${page}`}
+                  style={{ textDecoration: "none", color: "white" }}
                 >
-                  <MenuIcon />
-                </IconButton>
-                {pages.map((page) => (
-                  <Link
-                    to={`/${page}`}
-                    style={{ textDecoration: "none", color: "white" }}
+                  <Button
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "white", display: "block" }}
                   >
-                    <Button
-                      key={page}
-                      sx={{
-                        my: 2,
-                        color: "white",
-                        display: "block",
-                        textTransform: "capitalize",
-                        fontSize: 16,
-                      }}
-                    >
-                      {page}
-                    </Button>
-                  </Link>
-                ))}
-              </Box>
-              <MedicationIcon
-                sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
-              />
-              <Typography
-                variant="h5"
-                noWrap
-                component="a"
-                href=""
-                sx={{
-                  mr: 2,
-                  display: { xs: "flex", md: "none" },
-                  flexGrow: 1,
-                  fontFamily: "monospace",
-                  fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                Nutrition Medical Center
-              </Typography>
-              <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                {pages.map((page) => (
-                  <Link
-                    to={`/${page}`}
-                    style={{ textDecoration: "none", color: "white" }}
-                  >
-                    <Button
-                      key={page}
-                      sx={{
-                        my: 2,
-                        color: "white",
-                        display: "block",
-                        textTransform: "capitalize",
-                        fontSize: 16,
-                      }}
-                    >
-                      {page}
-                    </Button>
-                  </Link>
-                ))}
-              </Box>
-              <Box sx={{ flexGrow: 0 }}>
-                <Menu
-                  sx={{ mt: "45px" }}
-                  id="menu-appbar"
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                ></Menu>
-              </Box>
-            </Toolbar>
-          </Container>
-        </AppBar>
-      </ElevationScroll>
-    </>
+                    {page}
+                  </Button>
+                </Link>
+              ))}
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </ElevationScroll>
   );
 };
 
