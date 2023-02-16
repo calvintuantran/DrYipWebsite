@@ -33,7 +33,8 @@ const UpperNavBar = () => {
             <a
               href="http://maps.google.com/?q=6325 Topanga Canyon Blvd, Suite 315 Woodland Hills, CA 91367"
               target="_blank"
-              style ={{ textDecoration: 'none', color: 'black'}}
+              rel="noreferrer"
+              style={{ textDecoration: "none", color: "black" }}
             >
               6325 Topanga Canyon Blvd, Suite 315 Woodland Hills, CA 91367
             </a>
