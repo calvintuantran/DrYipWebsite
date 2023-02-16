@@ -30,7 +30,13 @@ const UpperNavBar = () => {
         <div className="divider_sections">
           <MedicalServicesIcon className="iconStyling" />
           <Typography style={{ marginRight: "1rem" }}>
-            6325 Topanga Canyon Suite 315, Woodland Hills Blvd CA 91367
+            <a
+              href="http://maps.google.com/?q=6325 Topanga Canyon Blvd, Suite 315 Woodland Hills, CA 91367"
+              target="_blank"
+              style ={{ textDecoration: 'none', color: 'black'}}
+            >
+              6325 Topanga Canyon Blvd, Suite 315 Woodland Hills, CA 91367
+            </a>
           </Typography>
         </div>
       </div>

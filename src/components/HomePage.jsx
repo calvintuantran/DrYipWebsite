@@ -23,12 +23,6 @@ const HomePage = () => {
           <Typography variant={mobileFont}>
             Office Hours: Monday - Friday, 8:00 AM to 5:00 PM
           </Typography>
-          <Typography
-            sx={{ m: "1rem 0", fontSize: isMobile && "1.4rem" }}
-            variant={mobileFont}
-          >
-            Clinic Hours: Monday - Wednesday, 8:00 AM to 5:00 PM
-          </Typography>
           <div
             className="underlineHome"
             style={{ position: "relative", left: "25%", margin: "1.5rem 0" }}

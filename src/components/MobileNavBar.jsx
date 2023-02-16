@@ -19,7 +19,7 @@ const MobileNavBar = () => {
       <div className="displayflex marginLeftRight">
         <MedicalServicesIcon className="iconStyling" />
         <Typography>
-          6325 Topanga Canyon Suite 315, Woodland Hills Blvd CA 91367
+          6325 Topanga Canyon Blvd, Suite 315 Woodland Hills, CA 91367
         </Typography>
       </div>
     </div>
