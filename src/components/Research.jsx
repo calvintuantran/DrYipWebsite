@@ -89,8 +89,8 @@ const Research = () => {
       <div className={classes.paragraph}>
         <ul>
           <li>
-            <a href="http://www.sciencedirect.com/science/article/pii/S0094014305700793">
-              http://www.sciencedirect.com/science/article/pii/S0094014305700793
+            <a href="http://onlinelibrary.wiley.com/doi/10.1038/oby.2001.140/abstract">
+              http://onlinelibrary.wiley.com/doi/10.1038/oby.2001.140/abstract
             </a>
           </li>
           <li>
@@ -99,8 +99,8 @@ const Research = () => {
             </a>
           </li>
           <li>
-            <a href="http://onlinelibrary.wiley.com/doi/10.1038/oby.2001.140/abstract">
-              http://onlinelibrary.wiley.com/doi/10.1038/oby.2001.140/abstract
+            <a href="http://www.sciencedirect.com/science/article/pii/S0094014305700793">
+              http://www.sciencedirect.com/science/article/pii/S0094014305700793
             </a>
           </li>
         </ul>
