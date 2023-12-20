@@ -36,10 +36,10 @@ const HomePage = () => {
           </Typography>
           <Typography sx={{ fontSize: "1.1rem", mb: "1`rem" }}>
             Dr. Yip does not accept commercial insurance and only accepts
-            original Medicare PPO. Patients (not Advantage plans) with private insurance can request a
-            superbill (itemized receipt) for their visit. It is the patient’s
-            responsibility to submit the superbill to their insurance and our
-            office does not guarantee reimbursement.
+            original Medicare PPO (not Advantage plans). Patients with private
+            insurance can request a superbill (itemized receipt) for their
+            visit. It is the patient’s responsibility to submit the superbill
+            to their insurance and ourP office does not guarantee reimbursement.
           </Typography>
         </div>
         <div className="right_container">
