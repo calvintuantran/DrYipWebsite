@@ -30,13 +30,13 @@ const HomePage = () => {
 
           <Typography variant="h4">New Patient Information</Typography>
 
-          <Typography variant="h6">$350 – New Patient Consultation </Typography>
+          <Typography variant="h6">$400 – New Patient Consultation </Typography>
           <Typography sx={{ mb: "1rem" }} variant="h6">
-            $150 – Follow-Up Visit
+            $170 – Follow-Up Visit
           </Typography>
           <Typography sx={{ fontSize: "1.1rem", mb: "1`rem" }}>
             Dr. Yip does not accept commercial insurance and only accepts
-            Medicare PPO. Patients with private insurance can request a
+            original Medicare PPO. Patients (not Advantage plans) with private insurance can request a
             superbill (itemized receipt) for their visit. It is the patient’s
             responsibility to submit the superbill to their insurance and our
             office does not guarantee reimbursement.
